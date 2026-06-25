@@ -3,74 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Каталог продукции | GNS Market Kazakhstan</title>
-
-<meta name="description"
-content="Каталог строительной химии GNS Market Kazakhstan: монтажные пены, герметики, клеи, полиуретановые системы, химические анкеры и промышленная химия.">
-
-<link rel="stylesheet" href="css/style.css">
-
+<meta name="description" content="Каталог продукции GNS Market Kazakhstan: монтажные пены, герметики, клей-пены, химические анкеры, эпоксидные клеи, ППУ-системы и Industrial Division.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f7fb;color:#111}
+a{text-decoration:none;color:inherit}
+:root{--blue:#0b2d5c;--red:#d60000;--gray:#667085}
+.topbar{background:#0b2d5c;color:white;padding:10px 6%;display:flex;justify-content:space-between;font-size:14px}
+.topbar a{color:white;margin-left:18px;font-weight:700}
+.header{background:white;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 3px 20px rgba(0,0,0,.08)}
+.logo{font-size:34px;font-weight:900;color:var(--red)}
+.logo span{display:block;font-size:13px;letter-spacing:6px;color:var(--blue)}
+.nav a{margin-left:26px;font-weight:800;color:var(--blue)}
+.hero{background:linear-gradient(120deg,rgba(11,45,92,.96),rgba(11,45,92,.78));color:white;padding:85px 6%}
+.hero h1{font-size:54px;margin-bottom:18px}
+.hero p{font-size:21px;line-height:1.6;max-width:900px}
+.section{padding:65px 6%}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:white;border-radius:18px;padding:32px;box-shadow:0 12px 35px rgba(0,0,0,.08);border-top:5px solid var(--red)}
+.card h2{color:var(--blue);font-size:25px;margin-bottom:14px}
+.card p{color:#475467;line-height:1.6;font-size:17px}
+.card ul{margin-top:15px;padding-left:20px;color:#475467;line-height:1.7}
+.btn{display:inline-block;margin-top:18px;background:var(--red);color:white;padding:13px 20px;border-radius:8px;font-weight:900}
+.footer{background:#0b2d5c;color:white;padding:35px 6%;margin-top:30px}
+@media(max-width:900px){.topbar,.header{display:block}.nav{margin-top:18px}.nav a{display:block;margin:10px 0}.hero h1{font-size:36px}.grid{grid-template-columns:1fr}}
+</style>
 </head>
 
 <body>
 
-<header class="page-header">
+<div class="topbar">
+  <div>GNS Market Kazakhstan | г. Алматы, Казахстан</div>
+  <div>
+    <a href="tel:+77056512203">+7 705 651 22 03</a>
+    <a href="mailto:gns.market.kz@gmail.com">gns.market.kz@gmail.com</a>
+  </div>
+</div>
 
-<h1>Каталог продукции</h1>
-
-<p>
-Мы предлагаем современные материалы для строительства,
-производства сэндвич-панелей и промышленности.
-</p>
-
+<header class="header">
+  <div class="logo">GNS <span>MARKET KAZAKHSTAN</span></div>
+  <nav class="nav">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="industrial.html">Industrial Division</a>
+    <a href="contacts.html">Контакты</a>
+  </nav>
 </header>
 
-<section class="catalog-grid">
-
-<div class="card">
-<h2>Монтажные пены</h2>
-<p>
-Профессиональные и бытовые полиуретановые монтажные пены.
-</p>
-</div>
-
-<div class="card">
-<h2>Полиуретановые герметики</h2>
-<p>
-Однокомпонентные и двухкомпонентные герметики.
-</p>
-</div>
-
-<div class="card">
-<h2>Клеи</h2>
-<p>
-Строительные и промышленные клеевые системы.
-</p>
-</div>
-
-<div class="card">
-<h2>Химические анкеры</h2>
-<p>
-Высокопрочные анкерные системы для бетона.
-</p>
-</div>
-
-<div class="card">
-<h2>ППУ системы</h2>
-<p>
-Полиуретановые системы для теплоизоляции.
-</p>
-</div>
-
-<div class="card">
-<h2>Industrial Division</h2>
-<p>
-Специальные решения для производственных предприятий.
-</p>
-</div>
-
+<section class="hero">
+  <h1>Каталог продукции</h1>
+  <p>Строительная химия, промышленные клеи и полиуретановые системы для строительных компаний, дилеров, монтажников и производственных предприятий Казахстана.</p>
 </section>
+
+<section class="section">
+  <div class="grid">
+
+    <div class="card">
+      <h2>Монтажные пены</h2>
+      <p>Профессиональные, бытовые, зимние, огнестойкие и высоковыходные полиуретановые пены.</p>
+      <ul><li>Окна и двери</li><li>Сэндвич-панели</li><li>Швы и примыкания</li></ul>
+      <a class="btn" href="https://wa.me/77056512203">Запросить цену</a>
+    </div>
+
+    <div class="card">
+      <h2>Герметики</h2>
+      <p>Силиконовые, нейтральные, полиуретановые, санитарные, фасадные и автомобильные герметики.</p>
+      <ul><li>Фасады</li><li>Стекло</li><li>Металл</li></ul>
+      <a class="btn" href="https://wa.me/77056512203">Запросить цену</a>
+    </div>
+
+    <div class="card">
+      <h2>Клей-пены</h2>
+      <p>Материалы для XPS, EPS, газоблока, теплоизоляции, фасадных и строительных систем.</p>
+      <ul><li>Утепление</li><li>Газоблок</li><li>Фасады</li></ul>
+      <a class="btn" href="https://wa.me/77056512203">Запросить цену</a>
+    </div>
+
+    <div class="card">
+      <h2>Химические анкеры</h2>
+      <p>Анкерные системы для бетона, арматуры, металлоконструкций и инженерных объектов.</p>
+      <ul><li>Бетон</li><li>Арматура</li><li>Металлоконструкции</li></ul>
+      <a class="btn" href="https://wa.me/77056512203">Запросить цену</a>
+    </div>
+
+    <div class="card">
+      <h2>Эпоксидные клеи</h2>
+      <p>Клеевые составы для камня, мрамора, гранита, кварца и промышленных ремонтных задач.</p>
+      <ul><li>Камень</li><li>Мрамор</li><li>Гранит</li></ul>
+      <a class="btn" href="https://wa.me/77056512203">Запросить цену</a>
+    </div>
+
+    <div class="card">
+      <h2>ППУ-системы</h2>
+      <p>Напыляемые и заливочные полиуретановые системы для теплоизоляции и промышленности.</p>
+      <ul><li>Холодильные камеры</li><li>Склады</li><li>Кровля</li></ul>
+      <a class="btn" href="https://wa.me/77056512203">Запросить цену</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <h3>GNS Market Kazakhstan</h3>
+  <p>Телефон: +7 705 651 22 03 | Email: gns.market.kz@gmail.com | Instagram: @gns.market.kz</p>
+</footer>
 
 </body>
 </html>
