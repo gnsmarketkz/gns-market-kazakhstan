@@ -4,30 +4,68 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Каталог продукции | GNS Market Kazakhstan</title>
-<meta name="description" content="Каталог продукции GNS Market Kazakhstan: монтажные пены, герметики, клей-пены, химические анкеры, эпоксидные клеи, ППУ-системы и Industrial Division.">
+<meta name="description" content="Каталог продукции GNS Market Kazakhstan: монтажные пены, герметики, клей-пены, химические анкеры, эпоксидные клеи, ППУ-системы и промышленные полиуретановые решения.">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Arial,Helvetica,sans-serif;background:#f4f7fb;color:#111}
 a{text-decoration:none;color:inherit}
-:root{--blue:#0b2d5c;--red:#d60000;--gray:#667085}
-.topbar{background:#0b2d5c;color:white;padding:10px 6%;display:flex;justify-content:space-between;font-size:14px}
-.topbar a{color:white;margin-left:18px;font-weight:700}
-.header{background:white;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 3px 20px rgba(0,0,0,.08)}
-.logo{font-size:34px;font-weight:900;color:var(--red)}
-.logo span{display:block;font-size:13px;letter-spacing:6px;color:var(--blue)}
-.nav a{margin-left:26px;font-weight:800;color:var(--blue)}
-.hero{background:linear-gradient(120deg,rgba(11,45,92,.96),rgba(11,45,92,.78));color:white;padding:85px 6%}
-.hero h1{font-size:54px;margin-bottom:18px}
-.hero p{font-size:21px;line-height:1.6;max-width:900px}
-.section{padding:65px 6%}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:white;border-radius:18px;padding:32px;box-shadow:0 12px 35px rgba(0,0,0,.08);border-top:5px solid var(--red)}
-.card h2{color:var(--blue);font-size:25px;margin-bottom:14px}
-.card p{color:#475467;line-height:1.6;font-size:17px}
-.card ul{margin-top:15px;padding-left:20px;color:#475467;line-height:1.7}
-.btn{display:inline-block;margin-top:18px;background:var(--red);color:white;padding:13px 20px;border-radius:8px;font-weight:900}
-.footer{background:#0b2d5c;color:white;padding:35px 6%;margin-top:30px}
-@media(max-width:900px){.topbar,.header{display:block}.nav{margin-top:18px}.nav a{display:block;margin:10px 0}.hero h1{font-size:36px}.grid{grid-template-columns:1fr}}
+:root{--blue:#0b2d5c;--red:#d60000;--dark:#101820;--gray:#667085}
+
+.topbar{background:var(--blue);color:#fff;padding:10px 6%;display:flex;justify-content:space-between;font-size:14px}
+.topbar a{color:#fff;margin-left:18px;font-weight:700}
+.header{background:#fff;padding:24px 6%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 3px 20px rgba(0,0,0,.08);position:sticky;top:0;z-index:10}
+.logo{font-size:38px;font-weight:900;color:var(--red);line-height:1}
+.logo span{display:block;font-size:13px;letter-spacing:7px;color:var(--blue);margin-top:7px}
+.nav a{margin-left:26px;font-weight:900;color:var(--blue)}
+.nav a:hover{color:var(--red)}
+
+.hero{background:linear-gradient(120deg,rgba(11,45,92,.96),rgba(11,45,92,.74)),url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;color:white;padding:95px 6%}
+.hero h1{font-size:58px;margin-bottom:18px}
+.hero p{font-size:22px;line-height:1.6;max-width:980px}
+.hero-buttons{margin-top:32px}
+.btn{display:inline-block;padding:15px 24px;border-radius:8px;font-weight:900;margin-right:10px}
+.btn-red{background:var(--red);color:#fff}
+.btn-white{background:#fff;color:var(--blue)}
+.section{padding:70px 6%}
+.section h2{font-size:42px;color:var(--blue);margin-bottom:18px}
+.section-intro{font-size:18px;color:var(--gray);max-width:920px;line-height:1.7;margin-bottom:36px}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.product{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 14px 38px rgba(0,0,0,.08);border:1px solid #e9eef5;transition:.25s}
+.product:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.13)}
+.product-img{height:190px;background:linear-gradient(135deg,#eef3f8,#dfe8f3);display:flex;align-items:center;justify-content:center;font-size:58px}
+.product-body{padding:28px}
+.tag{display:inline-block;background:#eef3ff;color:var(--blue);font-size:13px;font-weight:900;padding:7px 10px;border-radius:20px;margin-bottom:14px}
+.product h3{font-size:25px;color:var(--blue);margin-bottom:12px}
+.product p{font-size:16.5px;color:#475467;line-height:1.65;margin-bottom:14px}
+.specs{background:#f8fafc;border-radius:12px;padding:14px;margin:16px 0}
+.specs div{display:flex;justify-content:space-between;border-bottom:1px solid #e5e7eb;padding:7px 0;font-size:14px;color:#344054}
+.specs div:last-child{border-bottom:0}
+.actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.actions a{padding:12px 15px;border-radius:8px;font-weight:900;font-size:14px}
+.price{background:var(--red);color:#fff}
+.more{background:var(--blue);color:#fff}
+
+.band{background:var(--dark);color:#fff;padding:65px 6%;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.band h2{font-size:40px;margin-bottom:20px}
+.band p{font-size:18px;line-height:1.7;color:#d6e2f0}
+.band-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.band-list div{background:#1d2a38;padding:17px;border-radius:12px;font-weight:800}
+
+.footer{background:var(--blue);color:#fff;padding:40px 6%;display:grid;grid-template-columns:1fr 1fr 1fr;gap:25px}
+.footer h3{margin-bottom:14px}
+.footer a,.footer p{display:block;margin:8px 0;color:#dbeafe}
+.float{position:fixed;right:22px;bottom:22px;display:flex;flex-direction:column;gap:12px;z-index:99}
+.float a{width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:22px;font-weight:900;box-shadow:0 10px 25px rgba(0,0,0,.25)}
+.wa{background:#25D366}.call{background:var(--blue)}
+
+@media(max-width:900px){
+.topbar,.header,.band,.footer{display:block}
+.nav{margin-top:18px}.nav a{display:block;margin:10px 0}
+.hero h1{font-size:38px}.hero p{font-size:18px}
+.grid{grid-template-columns:1fr}.band-list{grid-template-columns:1fr}
+}
 </style>
 </head>
 
@@ -38,6 +76,7 @@ a{text-decoration:none;color:inherit}
   <div>
     <a href="tel:+77056512203">+7 705 651 22 03</a>
     <a href="mailto:gns.market.kz@gmail.com">gns.market.kz@gmail.com</a>
+    <a href="https://instagram.com/gns.market.kz">Instagram</a>
   </div>
 </div>
 
@@ -47,67 +86,175 @@ a{text-decoration:none;color:inherit}
     <a href="index.html">Главная</a>
     <a href="catalog.html">Каталог</a>
     <a href="industrial.html">Industrial Division</a>
+    <a href="solutions.html">Решения</a>
     <a href="contacts.html">Контакты</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>Каталог продукции</h1>
-  <p>Строительная химия, промышленные клеи и полиуретановые системы для строительных компаний, дилеров, монтажников и производственных предприятий Казахстана.</p>
+  <h1>Каталог продукции GNS</h1>
+  <p>Строительная химия, монтажные пены, герметики, клеевые системы и промышленные полиуретановые решения для строительных компаний, дилеров и заводов Казахстана.</p>
+  <div class="hero-buttons">
+    <a class="btn btn-red" href="https://wa.me/77056512203">Запросить прайс</a>
+    <a class="btn btn-white" href="mailto:gns.market.kz@gmail.com">Отправить заявку</a>
+  </div>
 </section>
 
 <section class="section">
+  <h2>Основные категории</h2>
+  <p class="section-intro">Каталог построен не как обычный список товаров, а как B2B-система подбора решений: для строительства, монтажа, производства сэндвич-панелей, холодильных камер, стеклопакетов, камнеобработки и промышленности.</p>
+
   <div class="grid">
 
-    <div class="card">
-      <h2>Монтажные пены</h2>
-      <p>Профессиональные, бытовые, зимние, огнестойкие и высоковыходные полиуретановые пены.</p>
-      <ul><li>Окна и двери</li><li>Сэндвич-панели</li><li>Швы и примыкания</li></ul>
-      <a class="btn" href="https://wa.me/77056512203">Запросить цену</a>
+    <div class="product">
+      <div class="product-img">🧯</div>
+      <div class="product-body">
+        <span class="tag">PU FOAM</span>
+        <h3>Монтажные пены</h3>
+        <p>Профессиональные, бытовые, зимние, огнестойкие и высоковыходные полиуретановые пены.</p>
+        <div class="specs">
+          <div><span>Применение</span><b>окна, двери, швы</b></div>
+          <div><span>Упаковка</span><b>баллон</b></div>
+          <div><span>Клиенты</span><b>монтажники, стройки</b></div>
+        </div>
+        <div class="actions">
+          <a class="price" href="https://wa.me/77056512203">Запросить цену</a>
+          <a class="more" href="#">Подробнее</a>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>Герметики</h2>
-      <p>Силиконовые, нейтральные, полиуретановые, санитарные, фасадные и автомобильные герметики.</p>
-      <ul><li>Фасады</li><li>Стекло</li><li>Металл</li></ul>
-      <a class="btn" href="https://wa.me/77056512203">Запросить цену</a>
+    <div class="product">
+      <div class="product-img">🧪</div>
+      <div class="product-body">
+        <span class="tag">SEALANTS</span>
+        <h3>Герметики</h3>
+        <p>Силиконовые, нейтральные, полиуретановые, фасадные, санитарные и автомобильные герметики.</p>
+        <div class="specs">
+          <div><span>Основа</span><b>силикон / PU</b></div>
+          <div><span>Применение</span><b>фасады, стекло</b></div>
+          <div><span>Сегмент</span><b>B2B / розница</b></div>
+        </div>
+        <div class="actions">
+          <a class="price" href="https://wa.me/77056512203">Запросить цену</a>
+          <a class="more" href="#">Подробнее</a>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>Клей-пены</h2>
-      <p>Материалы для XPS, EPS, газоблока, теплоизоляции, фасадных и строительных систем.</p>
-      <ul><li>Утепление</li><li>Газоблок</li><li>Фасады</li></ul>
-      <a class="btn" href="https://wa.me/77056512203">Запросить цену</a>
+    <div class="product">
+      <div class="product-img">🧱</div>
+      <div class="product-body">
+        <span class="tag">ADHESIVE FOAM</span>
+        <h3>Клей-пены</h3>
+        <p>Клеевые пены для XPS, EPS, газоблока, теплоизоляции, фасадных систем и строительства.</p>
+        <div class="specs">
+          <div><span>Материалы</span><b>XPS / EPS</b></div>
+          <div><span>Применение</span><b>утепление</b></div>
+          <div><span>Формат</span><b>баллон</b></div>
+        </div>
+        <div class="actions">
+          <a class="price" href="https://wa.me/77056512203">Запросить цену</a>
+          <a class="more" href="#">Подробнее</a>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>Химические анкеры</h2>
-      <p>Анкерные системы для бетона, арматуры, металлоконструкций и инженерных объектов.</p>
-      <ul><li>Бетон</li><li>Арматура</li><li>Металлоконструкции</li></ul>
-      <a class="btn" href="https://wa.me/77056512203">Запросить цену</a>
+    <div class="product">
+      <div class="product-img">🔩</div>
+      <div class="product-body">
+        <span class="tag">ANCHORS</span>
+        <h3>Химические анкеры</h3>
+        <p>Анкерные системы для бетона, арматуры, металлоконструкций и инженерных объектов.</p>
+        <div class="specs">
+          <div><span>Основание</span><b>бетон</b></div>
+          <div><span>Применение</span><b>анкеровка</b></div>
+          <div><span>Сегмент</span><b>строительство</b></div>
+        </div>
+        <div class="actions">
+          <a class="price" href="https://wa.me/77056512203">Запросить цену</a>
+          <a class="more" href="#">Подробнее</a>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>Эпоксидные клеи</h2>
-      <p>Клеевые составы для камня, мрамора, гранита, кварца и промышленных ремонтных задач.</p>
-      <ul><li>Камень</li><li>Мрамор</li><li>Гранит</li></ul>
-      <a class="btn" href="https://wa.me/77056512203">Запросить цену</a>
+    <div class="product">
+      <div class="product-img">🪨</div>
+      <div class="product-body">
+        <span class="tag">EPOXY</span>
+        <h3>Эпоксидные клеи</h3>
+        <p>Клеи для камня, мрамора, гранита, кварца и промышленных ремонтных задач.</p>
+        <div class="specs">
+          <div><span>Материалы</span><b>камень</b></div>
+          <div><span>Применение</span><b>склейка</b></div>
+          <div><span>Сегмент</span><b>камнеобработка</b></div>
+        </div>
+        <div class="actions">
+          <a class="price" href="https://wa.me/77056512203">Запросить цену</a>
+          <a class="more" href="#">Подробнее</a>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>ППУ-системы</h2>
-      <p>Напыляемые и заливочные полиуретановые системы для теплоизоляции и промышленности.</p>
-      <ul><li>Холодильные камеры</li><li>Склады</li><li>Кровля</li></ul>
-      <a class="btn" href="https://wa.me/77056512203">Запросить цену</a>
+    <div class="product">
+      <div class="product-img">🏭</div>
+      <div class="product-body">
+        <span class="tag">PU SYSTEMS</span>
+        <h3>ППУ-системы</h3>
+        <p>Напыляемые и заливочные полиуретановые системы для теплоизоляции и промышленности.</p>
+        <div class="specs">
+          <div><span>Тип</span><b>spray / pour</b></div>
+          <div><span>Применение</span><b>изоляция</b></div>
+          <div><span>Клиенты</span><b>заводы</b></div>
+        </div>
+        <div class="actions">
+          <a class="price" href="https://wa.me/77056512203">Запросить цену</a>
+          <a class="more" href="industrial.html">Industrial</a>
+        </div>
+      </div>
     </div>
 
   </div>
 </section>
 
+<section class="band">
+  <div>
+    <h2>Нужен подбор материала?</h2>
+    <p>Напишите нам в WhatsApp: укажите объект, задачу, объем и город. Мы подберем категорию продукции, техническую документацию и предложим условия поставки.</p>
+    <br>
+    <a class="btn btn-red" href="https://wa.me/77056512203">Написать в WhatsApp</a>
+  </div>
+  <div class="band-list">
+    <div>Строительным компаниям</div>
+    <div>Производителям панелей</div>
+    <div>Дилерам</div>
+    <div>Монтажникам</div>
+    <div>Заводам</div>
+    <div>Проектировщикам</div>
+  </div>
+</section>
+
 <footer class="footer">
-  <h3>GNS Market Kazakhstan</h3>
-  <p>Телефон: +7 705 651 22 03 | Email: gns.market.kz@gmail.com | Instagram: @gns.market.kz</p>
+  <div>
+    <h3>GNS Market Kazakhstan</h3>
+    <p>Строительная химия и полиуретановые технологии.</p>
+  </div>
+  <div>
+    <h3>Контакты</h3>
+    <a href="tel:+77056512203">+7 705 651 22 03</a>
+    <a href="mailto:gns.market.kz@gmail.com">gns.market.kz@gmail.com</a>
+  </div>
+  <div>
+    <h3>Соцсети</h3>
+    <a href="https://wa.me/77056512203">WhatsApp</a>
+    <a href="https://instagram.com/gns.market.kz">Instagram</a>
+  </div>
 </footer>
+
+<div class="float">
+  <a class="wa" href="https://wa.me/77056512203">W</a>
+  <a class="call" href="tel:+77056512203">☎</a>
+</div>
 
 </body>
 </html>
