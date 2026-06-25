@@ -3,55 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GNS Market Kazakhstan — строительная химия и промышленные клеи</title>
+<title>GNS Market Kazakhstan</title>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,Helvetica,sans-serif;background:#f4f4f4;color:#111}
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f7fb;color:#111}
 a{text-decoration:none;color:inherit}
-.top{background:#111;color:#fff;padding:10px 6%;display:flex;justify-content:space-between;align-items:center;font-size:14px}
-.top a{margin-left:18px;color:#fff}
-.header{background:#d60000;color:#fff;padding:28px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
-.logo{font-size:38px;font-weight:900;line-height:1}
-.logo span{display:block;font-size:14px;letter-spacing:7px;margin-top:8px}
-.nav a{margin-left:28px;font-weight:800}
-.hero{background:linear-gradient(135deg,#e00000,#7b0000);color:#fff;padding:110px 6%;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
-.hero h1{font-size:58px;line-height:1.08;margin-bottom:25px}
-.hero p{font-size:22px;line-height:1.6;max-width:850px}
-.btns{margin-top:35px}
-.btn{display:inline-block;padding:17px 30px;border-radius:8px;font-weight:900;margin-right:12px;background:#fff;color:#d60000}
-.btn.black{background:#111;color:#fff}
-.hero-box{background:rgba(255,255,255,.12);padding:30px;border-radius:18px;border:1px solid rgba(255,255,255,.25)}
-.hero-box h3{font-size:28px;margin-bottom:18px}
-.hero-box li{margin:12px 0;font-size:18px}
-.section{padding:70px 6%}
-.section h2{font-size:42px;margin-bottom:35px}
+:root{--blue:#0b2d5c;--red:#d60000;--dark:#101820;--gray:#667085}
+
+.topbar{background:#0b2d5c;color:white;padding:10px 6%;display:flex;justify-content:space-between;align-items:center;font-size:14px}
+.topbar a{margin-left:18px;color:white;font-weight:600}
+
+.header{background:white;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 3px 20px rgba(0,0,0,.08);position:sticky;top:0;z-index:10}
+.logo{font-size:34px;font-weight:900;color:var(--red);line-height:1}
+.logo span{display:block;font-size:13px;letter-spacing:6px;color:var(--blue);margin-top:7px}
+.nav a{margin-left:26px;font-weight:800;color:var(--blue)}
+.nav a:hover{color:var(--red)}
+
+.hero{min-height:720px;background:linear-gradient(120deg,rgba(11,45,92,.95),rgba(11,45,92,.72)),url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;color:white;padding:110px 6%;display:flex;align-items:center}
+.hero-content{max-width:900px}
+.hero h1{font-size:64px;line-height:1.05;margin-bottom:28px}
+.hero p{font-size:23px;line-height:1.6;margin-bottom:34px}
+.btn{display:inline-block;padding:17px 30px;border-radius:8px;font-weight:900;margin-right:12px}
+.btn-red{background:var(--red);color:white}
+.btn-white{background:white;color:var(--blue)}
+.btn-dark{background:#101820;color:white}
+
+.section{padding:75px 6%}
+.section-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}
+.section h2{font-size:42px;color:var(--blue)}
+.section-title p{max-width:620px;color:var(--gray);font-size:18px;line-height:1.6}
+
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:#fff;border-radius:16px;padding:30px;box-shadow:0 10px 35px rgba(0,0,0,.08);border-top:5px solid #d60000}
-.card h3{font-size:25px;color:#d60000;margin-bottom:14px}
-.card p{font-size:17px;line-height:1.6;color:#444}
-.dark{background:#111;color:#fff}
-.dark .card{background:#1d1d1d;color:#fff;border-top-color:#ff1a1a}
-.dark .card p{color:#ddd}
-.cta{background:#d60000;color:#fff;padding:60px 6%;display:flex;justify-content:space-between;align-items:center;gap:30px}
-.cta h2{font-size:38px}
-.form{background:#fff;padding:35px;border-radius:18px;max-width:520px;width:100%}
-.form input,.form textarea{width:100%;padding:15px;margin-bottom:12px;border:1px solid #ddd;border-radius:8px;font-size:16px}
-.form button{width:100%;padding:16px;background:#111;color:#fff;border:0;border-radius:8px;font-weight:900;font-size:16px}
-.footer{background:#080808;color:#fff;padding:45px 6%;display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px}
-.footer h3{color:#ff1a1a;margin-bottom:15px}
-.footer p,.footer a{display:block;margin:8px 0;color:#ddd}
-@media(max-width:900px){.top,.header,.cta,.footer{display:block}.nav{margin-top:20px}.nav a{display:block;margin:12px 0}.hero{grid-template-columns:1fr;padding:70px 6%}.hero h1{font-size:36px}.grid{grid-template-columns:1fr}}
+.card{background:white;border-radius:18px;padding:32px;box-shadow:0 12px 35px rgba(0,0,0,.08);transition:.25s;border:1px solid #edf0f5}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 45px rgba(0,0,0,.12)}
+.card .icon{font-size:38px;margin-bottom:18px}
+.card h3{font-size:25px;color:var(--blue);margin-bottom:14px}
+.card p{font-size:17px;line-height:1.6;color:#475467}
+.card a{display:inline-block;margin-top:18px;color:var(--red);font-weight:900}
+
+.dark{background:#101820;color:white}
+.dark h2{color:white}
+.dark .card{background:#162331;border-color:#24364a}
+.dark .card h3{color:white}
+.dark .card p{color:#cbd5e1}
+
+.band{background:var(--blue);color:white;padding:65px 6%;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.band h2{font-size:42px;margin-bottom:20px}
+.band p{font-size:19px;line-height:1.7;color:#dbeafe}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.list div{background:rgba(255,255,255,.1);padding:16px;border-radius:10px;font-weight:700}
+
+.contact{background:white;padding:75px 6%;display:grid;grid-template-columns:1fr 1fr;gap:45px}
+.contact h2{font-size:42px;color:var(--blue);margin-bottom:20px}
+.contact p{font-size:18px;line-height:1.7;color:#475467;margin-bottom:12px}
+.form{background:#f4f7fb;padding:35px;border-radius:18px}
+.form input,.form textarea{width:100%;padding:16px;margin-bottom:14px;border:1px solid #d0d5dd;border-radius:9px;font-size:16px}
+.form button{width:100%;padding:17px;background:var(--red);color:white;border:0;border-radius:9px;font-size:17px;font-weight:900}
+
+.footer{background:#0b2d5c;color:white;padding:40px 6%;display:grid;grid-template-columns:1fr 1fr 1fr;gap:25px}
+.footer h3{margin-bottom:14px}
+.footer a,.footer p{display:block;margin:8px 0;color:#dbeafe}
+
+.float-buttons{position:fixed;right:22px;bottom:22px;display:flex;flex-direction:column;gap:12px;z-index:99}
+.float-buttons a{width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:24px;font-weight:900;box-shadow:0 10px 25px rgba(0,0,0,.25)}
+.wa{background:#25D366}.inst{background:#E4405F}.call{background:#0b2d5c}
+
+@media(max-width:900px){
+.topbar,.header,.band,.contact,.footer{display:block}
+.nav{margin-top:18px}.nav a{display:block;margin:12px 0}
+.hero{min-height:auto;padding:70px 6%}.hero h1{font-size:38px}.hero p{font-size:19px}
+.grid{grid-template-columns:1fr}.section-title{display:block}.list{grid-template-columns:1fr}
+}
 </style>
 </head>
+
 <body>
 
-<div class="top">
-  <div>GNS Market Kazakhstan | Алматы, Казахстан</div>
+<div class="topbar">
+  <div>GNS Market Kazakhstan | г. Алматы, Казахстан</div>
   <div>
-    <a href="tel:+77000000000">+7 700 000 00 00</a>
+    <a href="tel:+77056512203">+7 705 651 22 03</a>
     <a href="mailto:gns.market.kz@gmail.com">gns.market.kz@gmail.com</a>
-    <a href="#">Instagram</a>
-    <a href="#">Telegram</a>
+    <a href="https://instagram.com/gns.market.kz">Instagram</a>
   </div>
 </div>
 
@@ -59,73 +93,75 @@ a{text-decoration:none;color:inherit}
   <div class="logo">GNS <span>MARKET KAZAKHSTAN</span></div>
   <nav class="nav">
     <a href="#catalog">Каталог</a>
-    <a href="#industrial">Industrial</a>
-    <a href="#solutions">Отрасли</a>
-    <a href="#dealers">Дилерам</a>
+    <a href="#industrial">Industrial Division</a>
+    <a href="#solutions">Решения</a>
     <a href="#contacts">Контакты</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div>
-    <h1>Строительная химия и промышленные полиуретановые решения</h1>
-    <p>Монтажные пены, герметики, клеи, ППУ-системы, химические анкеры, двухкомпонентные клеи и решения для заводов сэндвич-панелей в Казахстане.</p>
-    <div class="btns">
-      <a href="#catalog" class="btn">Смотреть каталог</a>
-      <a href="#contacts" class="btn black">Получить прайс</a>
-    </div>
-  </div>
-  <div class="hero-box">
-    <h3>Основные направления</h3>
-    <ul>
-      <li>Пены и герметики для строительства</li>
-      <li>Клей для сэндвич-панелей</li>
-      <li>ППУ-системы для холодильной промышленности</li>
-      <li>PU-герметики для автопрома</li>
-      <li>Эпоксидные клеи для камня</li>
-      <li>Химические анкеры для энергетики</li>
-    </ul>
+  <div class="hero-content">
+    <h1>Промышленная строительная химия для Казахстана</h1>
+    <p>Монтажные пены, герметики, клеи, ППУ-системы, химические анкеры и решения для производителей сэндвич-панелей, стеклопакетов, холодильных камер и промышленных объектов.</p>
+    <a class="btn btn-red" href="#catalog">Каталог продукции</a>
+    <a class="btn btn-white" href="https://wa.me/77056512203">Связаться в WhatsApp</a>
   </div>
 </section>
 
 <section class="section" id="catalog">
-  <h2>Каталог продукции</h2>
+  <div class="section-title">
+    <h2>Каталог продукции</h2>
+    <p>Ассортимент для строительных компаний, дилеров, монтажников, заводов и промышленных производств.</p>
+  </div>
+
   <div class="grid">
-    <div class="card"><h3>Монтажные пены</h3><p>Профессиональные, бытовые, зимние, огнестойкие и высоковыходные пены.</p></div>
-    <div class="card"><h3>Герметики</h3><p>Силиконовые, нейтральные, полиуретановые, санитарные, фасадные и автомобильные.</p></div>
-    <div class="card"><h3>Очистители</h3><p>Очистители монтажной пены, технические аэрозоли и сопутствующая химия.</p></div>
-    <div class="card"><h3>Клей-пены</h3><p>Для XPS, EPS, газоблока, теплоизоляции, фасадов и строительных систем.</p></div>
-    <div class="card"><h3>Химические анкеры</h3><p>Анкеровка бетона, арматуры, металлоконструкций и инженерных узлов.</p></div>
-    <div class="card"><h3>Эпоксидные клеи</h3><p>Для мрамора, гранита, кварца, камня и промышленных ремонтных задач.</p></div>
+    <div class="card"><div class="icon">🏗️</div><h3>Монтажные пены</h3><p>Профессиональные, бытовые, зимние, огнестойкие и высоковыходные пены.</p><a href="#">Подробнее</a></div>
+    <div class="card"><div class="icon">🧪</div><h3>Герметики</h3><p>Силиконовые, нейтральные, полиуретановые, санитарные, фасадные и автомобильные.</p><a href="#">Подробнее</a></div>
+    <div class="card"><div class="icon">🧱</div><h3>Клей-пены</h3><p>Для XPS, EPS, газоблока, теплоизоляции, фасадных систем и строительства.</p><a href="#">Подробнее</a></div>
+    <div class="card"><div class="icon">🧰</div><h3>Химические анкеры</h3><p>Анкеровка бетона, арматуры, металлоконструкций и инженерных узлов.</p><a href="#">Подробнее</a></div>
+    <div class="card"><div class="icon">🪨</div><h3>Эпоксидные клеи</h3><p>Для камня, мрамора, гранита, кварца и ремонтных промышленных задач.</p><a href="#">Подробнее</a></div>
+    <div class="card"><div class="icon">🧽</div><h3>Очистители</h3><p>Очистители монтажной пены, технические аэрозоли и сопутствующая химия.</p><a href="#">Подробнее</a></div>
   </div>
 </section>
 
 <section class="section dark" id="industrial">
-  <h2>Industrial Division</h2>
+  <div class="section-title">
+    <h2>Industrial Division</h2>
+    <p>Промышленные полиуретановые решения для заводов и производственных линий.</p>
+  </div>
+
   <div class="grid">
-    <div class="card"><h3>Клей для сэндвич-панелей</h3><p>Двухкомпонентные полиуретановые клеи для линий производства стеновых и кровельных панелей.</p></div>
+    <div class="card"><h3>Клей для сэндвич-панелей</h3><p>Двухкомпонентные полиуретановые клеи для производственных линий стеновых и кровельных панелей.</p></div>
     <div class="card"><h3>ППУ-системы</h3><p>Напыляемые и заливочные системы для холодильников, камер, складов, контейнеров и кровли.</p></div>
-    <div class="card"><h3>Сырьё и OEM</h3><p>Polyol, MDI, промышленная химия, контрактное производство и private label.</p></div>
+    <div class="card"><h3>OEM / Private Label</h3><p>Производство под собственной торговой маркой, сырьё, Polyol, MDI и техническое сопровождение.</p></div>
   </div>
 </section>
 
-<section class="section" id="solutions">
-  <h2>Решения по отраслям</h2>
-  <div class="grid">
-    <div class="card"><h3>Строительство</h3><p>Пены, герметики, анкеры и очистители для строительных объектов.</p></div>
-    <div class="card"><h3>Производство</h3><p>Клей для панелей, ПУ-системы, заводская химия и техническое сопровождение.</p></div>
-    <div class="card"><h3>Автомобильная промышленность</h3><p>PU-герметики для кузовов, стекол, фургонов, контейнеров и спецтехники.</p></div>
-    <div class="card"><h3>Камнеобработка</h3><p>Эпоксидные клеи для мрамора, гранита, кварца и фасадного камня.</p></div>
-    <div class="card"><h3>Стеклопакеты</h3><p>Структурные и нейтральные силиконы для стекольной промышленности.</p></div>
-    <div class="card"><h3>Холодильная промышленность</h3><p>ППУ-системы, теплоизоляция и герметизация холодильных объектов.</p></div>
-  </div>
-</section>
-
-<section class="cta" id="dealers">
+<section class="band" id="solutions">
   <div>
-    <h2>Получить прайс, образцы или дилерские условия</h2>
-    <p>Оставьте заявку. Мы подготовим предложение по вашей категории: строительство, производство, дилерство или Industrial Division.</p>
+    <h2>Решения для отраслей</h2>
+    <p>Сайт ориентирован не только на продажу товара, но и на подбор решений для конкретных задач: строительство, производство, автопром, стеклопакеты, камнеобработка и холодильная промышленность.</p>
   </div>
+  <div class="list">
+    <div>Строительство</div>
+    <div>Производство панелей</div>
+    <div>Стеклопакеты</div>
+    <div>Холодильные камеры</div>
+    <div>Автопром</div>
+    <div>Камнеобработка</div>
+  </div>
+</section>
+
+<section class="contact" id="contacts">
+  <div>
+    <h2>Контакты</h2>
+    <p><b>Телефон:</b> <a href="tel:+77056512203">+7 705 651 22 03</a></p>
+    <p><b>Email:</b> <a href="mailto:gns.market.kz@gmail.com">gns.market.kz@gmail.com</a></p>
+    <p><b>WhatsApp:</b> <a href="https://wa.me/77056512203">написать в WhatsApp</a></p>
+    <p><b>Instagram:</b> <a href="https://instagram.com/gns.market.kz">@gns.market.kz</a></p>
+    <p><b>Адрес:</b> г. Алматы, Казахстан</p>
+  </div>
+
   <form class="form">
     <input placeholder="Ваше имя">
     <input placeholder="Телефон / WhatsApp">
@@ -135,24 +171,28 @@ a{text-decoration:none;color:inherit}
   </form>
 </section>
 
-<footer class="footer" id="contacts">
+<footer class="footer">
   <div>
     <h3>GNS Market Kazakhstan</h3>
     <p>Строительная химия и полиуретановые технологии.</p>
   </div>
   <div>
-    <h3>Контакты</h3>
-    <a href="tel:+77000000000">+7 700 000 00 00</a>
+    <h3>Связь</h3>
+    <a href="tel:+77056512203">+7 705 651 22 03</a>
     <a href="mailto:gns.market.kz@gmail.com">gns.market.kz@gmail.com</a>
-    <a href="#">WhatsApp</a>
   </div>
   <div>
     <h3>Социальные сети</h3>
-    <a href="#">Instagram</a>
-    <a href="#">Telegram</a>
-    <a href="#">YouTube</a>
+    <a href="https://wa.me/77056512203">WhatsApp</a>
+    <a href="https://instagram.com/gns.market.kz">Instagram</a>
   </div>
 </footer>
+
+<div class="float-buttons">
+  <a class="wa" href="https://wa.me/77056512203">W</a>
+  <a class="inst" href="https://instagram.com/gns.market.kz">I</a>
+  <a class="call" href="tel:+77056512203">☎</a>
+</div>
 
 </body>
 </html>
